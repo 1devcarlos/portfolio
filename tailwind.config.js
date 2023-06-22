@@ -10,6 +10,9 @@ module.exports = {
       sans: ['var(--font-inter)', 'sans-serif'],
     },
     extend: {
+      colors: {
+        'rose': '#FF0042'
+      },
       backgroundImage: {
         'hero-image': "url('/images/hero-bg.png')",
       },

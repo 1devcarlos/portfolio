@@ -12,6 +12,10 @@
   @apply mx-auto w-full max-w-[1200px] px-6;
 }
 
+.mobile-nav {
+  @apply flex flex-col justify-center w-[30px] h-[25px] cursor-pointer;
+}
+
 *::-webkit-scrollbar {
   width: 8px;
 }
@@ -22,6 +26,6 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #10b981;
+  background-color: #ff0042;
   border-radius: 14px;
 }

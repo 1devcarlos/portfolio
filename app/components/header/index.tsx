@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import MenuButton from "./MenuButton";
+import { MenuButton } from "./MenuButton";
 import { NavItem } from "./NavItem";
 
 const NAV_ITEMS = [
@@ -30,8 +30,8 @@ const NAV_ITEMS = [
 ];
 
 const MobileMenu = () => (
-  <div className="absolute top-10 left-0 bg-secondary py-4 text-gray-50 mt-2 w-full rounded-lg shadow-lg z-10 ">
-    <nav className="flex flex-col gap-4 w-full items-center">
+  <div className="absolute top-10 left-0 bg-darker py-4 text-gray-50 mt-8 w-full rounded-lg shadow-lg z-10 ">
+    <nav className="flex flex-col justify-between gap-4 items-center h-screen">
       {NAV_ITEMS.map((item) => (
         <NavItem {...item} key={item.label} />
       ))}
@@ -39,7 +39,7 @@ const MobileMenu = () => (
   </div>
 );
 
-export default function Header() {
+export const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -66,7 +66,7 @@ export default function Header() {
         {isMobile ? (
           <MenuButton menuContent={<MobileMenu />} />
         ) : (
-          <nav className="hidden md:flex items-center gap-6 md:gap-10 font-medium font-mono">
+          <nav className="hidden md:flex items-center gap-6 md:gap-10 ">
             {NAV_ITEMS.map((item) => (
               <NavItem {...item} key={item.label} />
             ))}
@@ -75,4 +75,4 @@ export default function Header() {
       </div>
     </header>
   );
-}
+};

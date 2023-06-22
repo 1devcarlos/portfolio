@@ -12,13 +12,13 @@ export const NavItem = ({ label, href }: NavItemProps) => {
 
   const isActive = pathname === href;
   return (
-    <Link href={href}>
-      <div
-        className={cn(
-          "relative group transition-all hover:text-gray-50 text-gray-400 flex items-center font-medium",
-          isActive && "text-gray-50"
-        )}
-      >
+    <div
+      className={cn(
+        "relative group transition-all hover:text-gray-50 text-gray-400 flex items-center font-medium",
+        isActive && "text-gray-50"
+      )}
+    >
+      <Link href={href}>
         {label}
         <span
           className={cn(
@@ -26,7 +26,7 @@ export const NavItem = ({ label, href }: NavItemProps) => {
             isActive && "w-full"
           )}
         />
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };

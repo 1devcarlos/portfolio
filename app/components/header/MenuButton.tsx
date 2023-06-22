@@ -4,7 +4,7 @@ interface MenuButtonProps {
   menuContent: React.ReactElement;
 }
 
-export default function MenuButton({ menuContent }: MenuButtonProps) {
+export const MenuButton = ({ menuContent }: MenuButtonProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -38,4 +38,4 @@ export default function MenuButton({ menuContent }: MenuButtonProps) {
       {isMenuOpen && menuContent}
     </button>
   );
-}
+};

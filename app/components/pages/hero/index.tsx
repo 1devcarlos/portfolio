@@ -5,7 +5,7 @@ import {
   TbBrandLinkedin,
   TbBrandWhatsapp,
 } from "react-icons/tb";
-import { Button } from "../Button";
+import { Button } from "../../Button";
 import { TechBadge } from "../TechBadge";
 
 const MOCK_CONTACTS = [

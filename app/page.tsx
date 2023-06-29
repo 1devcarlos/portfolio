@@ -1,6 +1,7 @@
-import { BestProjects } from "./components/pages/BestProjects";
-import { HeroSection } from "./components/pages/hero";
-import { Knowledge } from "./components/pages/Knowledge";
+import { BestProjects } from "./components/pages/home/BestProjects";
+import { Knowledge } from "./components/pages/home/Knowledge";
+import { WorkExperience } from "./components/pages/home/WorkExperience";
+import { HeroSection } from "./components/pages/home/hero";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <Knowledge />
       <BestProjects />
+      <WorkExperience />
     </>
   );
 }

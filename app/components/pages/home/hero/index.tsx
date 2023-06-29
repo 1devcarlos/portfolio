@@ -23,7 +23,7 @@ const MOCK_CONTACTS = [
   {
     url: "https://github.com/1devcarlos",
     icon: <TbBrandWhatsapp />,
-    tooltipText: "Fale comigo no whatsapp",
+    tooltipText: "Fale comigo",
   },
   {
     url: "https://github.com/1devcarlos",

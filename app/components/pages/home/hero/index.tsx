@@ -1,3 +1,4 @@
+import { Button } from "@/app/components/Button";
 import Image from "next/image";
 import { HiArrowNarrowRight, HiOutlineDocumentText } from "react-icons/hi";
 import {
@@ -5,7 +6,6 @@ import {
   TbBrandLinkedin,
   TbBrandWhatsapp,
 } from "react-icons/tb";
-import { Button } from "../../Button";
 import { TechBadge } from "../TechBadge";
 
 const MOCK_CONTACTS = [

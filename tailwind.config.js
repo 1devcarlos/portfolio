@@ -16,7 +16,9 @@ module.exports = {
         'dark': '#1d1e20',
         'light-dark': '#5e636e'
       },
-
+      backgroundImage: {
+        'hero-image': "url('/hero-bg.png')",
+      },
       fontFamily: {
         mono: ['var(--font-plex-mono)', 'monospace'],
       },

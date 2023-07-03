@@ -96,7 +96,7 @@ export const HeroSection = () => {
           width={320}
           height={300}
           alt="Logo CG"
-          className="absolute right-20 top-40 hidden lg:block w-[320px] h-[300px]"
+          className="absolute right-20 top-40 hidden lg:block w-auto h-auto"
         />
       </div>
     </section>

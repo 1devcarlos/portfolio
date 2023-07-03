@@ -1,5 +1,5 @@
-import { PageIntroduction } from "../components/projects/PageIntroduction";
-import { ProjectsList } from "../components/projects/ProjetctsList";
+import { PageIntroduction } from "../components/pages/projects/PageIntroduction";
+import { ProjectsList } from "../components/pages/projects/ProjetctsList";
 
 export default function Projects() {
   return (

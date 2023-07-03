@@ -1,4 +1,4 @@
-import { Link } from "../../Link";
+import { Link } from "@/app/components/Link";
 import { ProjectCard } from "./ProjectCard";
 
 export const ProjectsList = () => {

@@ -12,16 +12,8 @@ const NAV_ITEMS = [
     href: "/projects",
   },
   {
-    label: "Tecnologias",
-    href: "/stack",
-  },
-  {
     label: "Sobre",
     href: "/about",
-  },
-  {
-    label: "Experiência",
-    href: "/experience",
   },
   {
     label: "Contato",
@@ -60,7 +52,13 @@ export const Header = () => {
     <header className="absolute top-0 w-full z-10">
       <div className="container flex justify-between items-center">
         <Link href="/" className="p-4">
-          <Image src="/logo.png" alt="CG Logo" width={38} height={30} />
+          <Image
+            src="/logo.png"
+            alt="CG Logo"
+            width={38}
+            height={30}
+            className="w-auto h-auto"
+          />
         </Link>
 
         {isMobile ? (

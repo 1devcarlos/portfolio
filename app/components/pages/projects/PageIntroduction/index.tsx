@@ -1,6 +1,6 @@
+import { Link } from "@/app/components/Link";
 import { HiArrowNarrowLeft } from "react-icons/hi";
-import { Link } from "../../Link";
-import { SectionTitle } from "../../pages/home/SectionTitle";
+import { SectionTitle } from "../../home/SectionTitle";
 
 export const PageIntroduction = () => {
   return (

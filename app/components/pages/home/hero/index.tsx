@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/app/components/Button";
 import Image from "next/image";
 import { HiArrowNarrowRight, HiOutlineDocumentText } from "react-icons/hi";
@@ -33,6 +35,12 @@ const MOCK_CONTACTS = [
 ];
 
 export const HeroSection = () => {
+  const handleContact = () => {
+    const contactSection = document.querySelector("#contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section className="w-full h-[755px] flex flex-col justify-center pb-10 py-10 lg:py-32">
       <div className="container flex items-start justify-between">
@@ -59,12 +67,12 @@ export const HeroSection = () => {
 
           <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[250px]">
             {Array.from({ length: 7 }).map((_, index) => (
-              <TechBadge name={"Next"} />
+              <TechBadge key={index} name={"Next"} />
             ))}
           </div>
 
           <div className="mt-16 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sm:flex-row">
-            <Button className="shadow-button ">
+            <Button className="shadow-button" onClick={handleContact}>
               Entre em Contato
               <HiArrowNarrowRight />
             </Button>

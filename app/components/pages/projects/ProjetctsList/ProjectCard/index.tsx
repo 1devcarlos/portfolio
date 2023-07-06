@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const ProjectCard = () => {
   return (
-    <div className="rounded-lg h-[436px] flex flex-col bg-gray-800 overflow-hidden group transition-all border-2 border-gray-800 hover:border-emerald-500 opacity-70 hover:opacity-100">
+    <div className="rounded-lg h-[436px] flex flex-col bg-gray-800 overflow-hidden group transition-all border-2 border-gray-800 hover:border-rose opacity-70 hover:opacity-100">
       <div className="w-full h-48 overflow-hidden">
         <Image
           width={380}

@@ -1,40 +1,18 @@
 "use client";
 
 import { Button } from "@/app/components/Button";
+import { CMSIcon } from "@/app/components/cms-icon";
+import { RichText } from "@/app/components/rich-text";
+import { HomePageInfo } from "@/app/types/page-info";
 import Image from "next/image";
-import { HiArrowNarrowRight, HiOutlineDocumentText } from "react-icons/hi";
-import {
-  TbBrandGithub,
-  TbBrandLinkedin,
-  TbBrandWhatsapp,
-} from "react-icons/tb";
+import { HiArrowNarrowRight } from "react-icons/hi";
 import { TechBadge } from "../TechBadge";
 
-const MOCK_CONTACTS = [
-  {
-    url: "https://github.com/1devcarlos",
-    icon: <TbBrandGithub />,
-    tooltipText: "Meu Github",
-  },
-  {
-    url: "https://www.linkedin.com/in/1devcarlos/",
-    icon: <TbBrandLinkedin />,
-    tooltipText: "Meu LinkedIn",
-  },
+type HomeSectionProps = {
+  homeInfo: HomePageInfo;
+};
 
-  {
-    url: "https://github.com/1devcarlos",
-    icon: <TbBrandWhatsapp />,
-    tooltipText: "Fale comigo",
-  },
-  {
-    url: "https://github.com/1devcarlos",
-    icon: <HiOutlineDocumentText />,
-    tooltipText: "Baixe meu currículo",
-  },
-];
-
-export const HeroSection = () => {
+export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
   const handleContact = () => {
     const contactSection = document.querySelector("#contact");
     if (contactSection) {
@@ -54,20 +32,13 @@ export const HeroSection = () => {
           <h2 className="font-bold text-6xl text-rose mt-2">
             Desenvolvedor Frontend
           </h2>
-          <p className="text-gray-400 my-6 text-sm sm:text-base">
-            Ajudo empresas a se tornarem{" "}
-            <span className="font-semibold text-gray-100 my-6 text-sm sm:text-base">
-              Digitais
-            </span>{" "}
-            e{" "}
-            <span className="font-semibold text-gray-100 my-6 text-sm sm:text-base">
-              Modernas
-            </span>
-          </p>
+          <div className="text-gray-400 my-6 text-sm sm:text-base">
+            <RichText content={homeInfo.introduction.raw} />
+          </div>
 
           <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[250px]">
-            {Array.from({ length: 7 }).map((_, index) => (
-              <TechBadge key={index} name={"Next"} />
+            {homeInfo.technologies.map((tech, index) => (
+              <TechBadge name={tech.name} key={index} />
             ))}
           </div>
 
@@ -77,30 +48,24 @@ export const HeroSection = () => {
               <HiArrowNarrowRight />
             </Button>
 
-            <div className="text-gray-600 text-2xl flex items-center justify-center h-20 gap-28 lg:gap-14 sm:gap-10 px-2 sm:py-1">
-              {MOCK_CONTACTS.map((contact, index) => (
-                <div
-                  key={`contact-${index}`}
-                  className="relative group mt-28 sm:mt-0"
+            <div className="text-2xl text-gray-600 flex items-center h-20 gap-3">
+              {homeInfo.socials.map((contact, i) => (
+                <a
+                  href={contact.url}
+                  key={`contact-${i}`}
+                  target="_blank"
+                  className="hover:text-gray-100 transition-colors"
+                  rel="noreferrer"
                 >
-                  <a
-                    href={contact.url}
-                    target="_blank"
-                    className="hover:text-gray-100 hover:animate-pulse transition-colors"
-                  >
-                    {contact.icon}
-                  </a>
-                  <span className="tooltip absolute bottom-full left-1/2 transform -translate-x-1/2 py-2 px-4 bg-dark text-gray-400 text-xs center rounded opacity-0 invisible  transition-opacity duration-300 group-hover:opacity-100 group-hover:visible">
-                    {contact.tooltipText}
-                  </span>
-                </div>
+                  <CMSIcon icon={contact.iconSvg} />
+                </a>
               ))}
             </div>
           </div>
         </div>
 
         <Image
-          src="/logo.png"
+          src={homeInfo.logoPicture.url}
           width={320}
           height={300}
           alt="Logo CG"

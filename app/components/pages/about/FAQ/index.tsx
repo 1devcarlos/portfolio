@@ -6,7 +6,7 @@ import { FaqItem } from "./FaqItem";
 
 export const FAQ = () => {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="container flex flex-col items-center justify-center">
       {faqData.map((item, index) => {
         return (
           <motion.div

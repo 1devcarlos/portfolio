@@ -26,9 +26,8 @@ export default function Contact() {
         className="flex flex-col items-center"
       >
         <p className="text-gray-400 text-center max-w-[640px] my-6 text-sm sm:text-base">
-          Gostou do meu perfil e quer conversar comigo sobre sua próxima
-          aplicação ? preencha o formulário, ou entra em contato comigo em
-          qualquer um dos links de rede social pelo site!
+          Quer transformar sua próxima idea de aplicação em realidade ? Entre em
+          contato para discutirmos seus próximos passos!.
         </p>
 
         <Link href="/">

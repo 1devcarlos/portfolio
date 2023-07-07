@@ -19,7 +19,7 @@ const plexMono = IBM_Plex_Mono({
 
 export const metadata = {
   title: {
-    default: "Home",
+    default: "Home | CG Dev",
     template: "%s | CG Dev",
   },
   icons: [

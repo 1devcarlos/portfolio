@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useState } from "react";
 import { TbArrowNarrowUp } from "react-icons/tb";
 import { Button } from "../Button";
@@ -12,25 +13,29 @@ export const BackToTop = () => {
   };
 
   const handleScroll = useCallback(() => {
-    if (!show && window.scrollY > 500) {
-      setShow(true);
-    } else if (show && window.scrollY <= 500) {
-      setShow(false);
-    }
+    if (!show && window.scrollY > 500) setShow(true);
+    if (show && window.scrollY <= 500) setShow(false);
   }, [show]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
 
   return (
-    <div className={`fixed right-4 bottom-4 z-20 ${show ? "block" : "hidden"}`}>
-      <Button onClick={scrollToTop} className="shadow-lg shadow-rose/20">
-        <TbArrowNarrowUp size={20} />
-      </Button>
-    </div>
+    <AnimatePresence>
+      {show && (
+        <motion.div
+          initial={{ opacity: 0, right: -10 }}
+          animate={{ opacity: 1, right: 16 }}
+          exit={{ opacity: 0, right: -10 }}
+          className="fixed right-4 bottom-4 z-20"
+        >
+          <Button onClick={scrollToTop} className="shadow-lg shadow-rose/20">
+            <TbArrowNarrowUp size={20} />
+          </Button>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };

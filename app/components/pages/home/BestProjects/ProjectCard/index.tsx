@@ -17,7 +17,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           alt={`Thumbnail do projeto${project.title}`}
           width={420}
           height={304}
-          className="w-full h-[200px] sm:h-[300px] lg:w-[420px] lg:min-h-full rounded-lg"
+          className="w-full h-full object-cover rounded-lg"
         />
       </div>
 

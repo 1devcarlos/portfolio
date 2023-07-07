@@ -75,10 +75,12 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
           </a>
         )}
       </motion.div>
-      <Link href="/projects">
-        <HiArrowNarrowLeft size={20} />
-        Voltar para Projetos
-      </Link>
+      <motion.div {...fadeUpAnimation}>
+        <Link href="/projects">
+          <HiArrowNarrowLeft size={20} />
+          Voltar para Projetos
+        </Link>
+      </motion.div>
     </section>
   );
 };

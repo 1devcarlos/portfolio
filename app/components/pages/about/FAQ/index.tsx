@@ -1,36 +1,25 @@
 "use client";
 
-import { useState } from "react";
-import { FaArrowDown, FaArrowUp } from "react-icons/fa";
+import { motion } from "framer-motion";
 import { faqData } from "../faqData";
+import { FaqItem } from "./FaqItem";
 
 export const FAQ = () => {
-  const [expanded, setExpanded] = useState(null);
-
-  const handleCollapse = (index: any) => {
-    if (expanded === index) {
-      setExpanded(null);
-    } else {
-      setExpanded(index);
-    }
-  };
   return (
-    <section className="container items-center flex flex-col justify-center">
-      {faqData.map((item, index) => (
-        <div key={index} className="items-center max-w-[640px]">
-          {item.question}
-          <div
-            className="faq-icon cursor-pointer right-2"
-            onClick={() => handleCollapse(index)}
+    <div className="flex flex-col items-center justify-center">
+      {faqData.map((item, index) => {
+        return (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 100 }}
+            transition={{ duration: 0.6 }}
           >
-            {expanded === index ? <FaArrowUp /> : <FaArrowDown />}
-          </div>
-
-          {expanded === index && (
-            <div className="faq-answer">{item.answer}</div>
-          )}
-        </div>
-      ))}
-    </section>
+            <FaqItem question={item.question} answer={item.answer} />
+          </motion.div>
+        );
+      })}
+    </div>
   );
 };

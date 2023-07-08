@@ -31,13 +31,13 @@ export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
           transition={{ duration: 0.5 }}
           className="w-full lg:max-w-[530px]"
         >
-          <p className="text-lg text-gray-400">
+          <p className="text-base sm:text-lg text-gray-400">
             Olá, meu nome é{" "}
             <span className="font-medium text-gray-50 my-6 text-sm sm:text-base">
               Carlos Gomes
             </span>
           </p>
-          <h2 className="font-bold text-6xl text-rose mt-2">
+          <h2 className="font-bold text-4xl sm:text-6xl text-rose mt-2">
             Desenvolvedor Frontend
           </h2>
           <div className="text-gray-400 my-6 text-sm sm:text-base">

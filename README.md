@@ -6,12 +6,12 @@ Esse projeto foi desenvolvido para demonstrar minhas habilidades e ser um local 
 
 - Home Page
   <div align="center">
-    <img src="/homepage.png" />
+    <img src="./public/homepage.png" />
   </div>
 
 - Page Speed Test
   <div align="center">
-    <img src="/pagespeed.png" />
+    <img src="./public/pagespeed.png" />
   </div>
 
 # ⚙️ Tecnologias

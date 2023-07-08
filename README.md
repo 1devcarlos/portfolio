@@ -10,4 +10,4 @@ Esse projeto foi desenvolvido para demonstrar minhas habilidades e ser um local 
 - Framer Motion
 - Hygraph CMS
 
-<p align='center'>Desenvolvido com 💙 por <a href='https://www.linkedin.com/in/1devcarlos/' target='_blank'>Carlos Gomes</a></p>
+<p align='center'>Desenvolvido com 💙 por <a href='https://www.linkedin.com/in/1devcarlos/'>Carlos Gomes</a></p>

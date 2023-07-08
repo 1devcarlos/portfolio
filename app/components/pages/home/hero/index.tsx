@@ -89,7 +89,7 @@ export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
             width={320}
             height={300}
             alt="Logo CG"
-            className="w-[300px] h-[300px] lg:w-[420px] lg:h-[420px] mb-6 lg:mb-0 shadow-2xl rounded-full object-cover"
+            className="w-[300px] h-[300px] mb-6 hidden lg:block shadow-2xl rounded-full object-cover"
           />
         </motion.div>
       </div>

@@ -9,3 +9,9 @@ export const fadeUpAnimation = {
   whileInView: { opacity: 1, y: 0 },
   exit: { opacity: 0, y: 50 },
 };
+
+export const headerAnimation = {
+  initial: { top: -100 },
+  animate: { top: 0 },
+  transition: { duration: 0.5 },
+};

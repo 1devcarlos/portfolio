@@ -58,13 +58,19 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
 
       <div>
         <div className="flex flex-col gap-2 text-sm sm:text-base">
-          <a
-            href={experience.companyUrl}
-            target="_blank"
-            className="text-gray-500 hover:text-rose transition-colors"
-          >
-            @ {experience.companyName}
-          </a>
+          {experience.companyUrl ? (
+            <a
+              href={experience.companyUrl}
+              target="_blank"
+              className="text-gray-500 hover:text-rose transition-colors"
+            >
+              @ {experience.companyName}
+            </a>
+          ) : (
+            <div className="text-gray-500 hover:text-rose transition-colors">
+              @ {experience.companyName}
+            </div>
+          )}
           <h4 className="text-gray-300">{experience.role}</h4>
           <span className="text-gray-500">
             {formattedStartDate} • {formattedEndDate}{" "}

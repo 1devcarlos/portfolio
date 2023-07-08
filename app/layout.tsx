@@ -23,6 +23,8 @@ export const metadata = {
     default: "Home | CG Dev",
     template: "%s | CG Dev",
   },
+  description:
+    "Desenvolvedor frontend, ajudando empresas a se tornarem Digitais e Modernas. Site para aumentar sua presença digital ? Aplicação para melhorar o fluxo interno de sua empresa ? Soluções para tornar sua empresa mais tecnológica ? Conheça meu trabalho agora mesmo!",
   icons: [
     {
       url: "/logo.png",

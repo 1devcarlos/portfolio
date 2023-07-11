@@ -7,7 +7,6 @@ import { techBadgeAnimation } from "@/app/lib/animations";
 import { HomePageInfo } from "@/app/types/page-info";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { HiArrowNarrowRight } from "react-icons/hi";
 import { TechBadge } from "../TechBadge";
 
 type HomeSectionProps = {
@@ -58,7 +57,6 @@ export const HeroSection = ({ homeInfo }: HomeSectionProps) => {
           <div className="mt-16 lg:mt-10 flex sm:items-center sm:gap-5 flex-col sm:flex-row">
             <Button className="shadow-button" onClick={handleContact}>
               Entre em Contato
-              <HiArrowNarrowRight />
             </Button>
 
             <div className="text-2xl text-gray-600 flex items-center h-20 gap-3">
